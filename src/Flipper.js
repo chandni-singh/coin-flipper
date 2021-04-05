@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Coin from './Coin';
 import './Flipper.css';
 
+// counters
 let flips = 0;
 let heads = 0;
 let tails = 0; 
@@ -31,12 +32,15 @@ class Flipper extends Component {
 
     render() {
         return (
-            <div className = "Flipper-container">
-                <h1>Let's flip a coin!</h1>
-                <Coin src = {this.state.imgURL} />  
-                <button onClick = {this.flip}>FLIP ME!</button>
-                <div>Out of {flips} flips, there have been {heads} heads and {tails} tails.</div>
+            <div className = "Flipper">
+                <div className = "Flipper-container">
+                    <h1>Let's flip a coin!</h1>
+                    <Coin src = {this.state.imgURL} />  
+                    <button onClick = {this.flip}>FLIP ME!</button>
+                    <div>Out of {flips} flips, there have been {heads} heads and {tails} tails.</div>
+                </div>
             </div>
+
 
         )
     }
